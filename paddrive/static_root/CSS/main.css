@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
+.label-error {
+    background-color: red;
+    color: white;
+}
+
+
+.label-bold {
+    font-weight: bold;
+    font-family: ubuntu;
+}
+
+.table-des {
+    column-gap: 100px;
+    column-fill: balance;
+    background-color: antiquewhite;
+    -moz-column-width: 200px;
+    column-width: 100px;
+    margin: 50px;
+}
+
+.margin-medium {
+    margin-right: 2%;
+}
+
+.bg {
+    background-color: bisque;
+    padding: .3%;
+}
+
+
+.dark {
+    background-color: rgba(43, 41, 41, 0.151);
+    border-radius: 8px;
+}
+
+.dark-l {
+    background-color: rgba(51, 50, 49, 0.103);
+    border-radius: 8px;
+}
+
+.orange {
+    color: orange;
+}
+
+.white {
+    color: white;
+}
+
+.title {
+    font-size: 150%;
+}
+
+.blue {
+    color: rgb(68, 182, 248);
+}
+
+.teal {
+    color: teal;
+}
+
+.gold {
+    color: gold;
+}
+
+.orange-bg {
+    background-color: rgb(226, 149, 6);
+}
+
+.dark-text {
+    color: rgb(43, 41, 41);
+}
+
+.dark-text:hover {
+    color: rgb(0, 0, 0);
+}
+
+.right-side {
+    text-align: right;
+}
+
+.left-side {
+    text-align: left;
+}
+
+.center-side {
+    text-align: center;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 22;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
+.modal-content {
+    background-color: #1d1c1c;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-transparent {
+    display: none;
+    position: fixed;
+    z-index: 22;
+    padding-top: 100px;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.897);
+    transition: all 1s;
+
+}
+
+
+.modal-content2 {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+.modal-content-dark {
+    background-color: rgb(51, 50, 49);
+    border-radius: 8px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(73, 72, 72);
+    color: rgb(161, 148, 148);
+    width: 80%;
+}
+
+.orange-border {
+    border: 1px orange solid;
+    box-shadow: 0.5em 1em 2em .1em rgba(85, 63, 23, 0.671);
+    transition: all .2s;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+
+.orange-border:hover {
+    box-shadow: 0em 0.1em .7em 0.1em rgba(235, 156, 11);
+}
+
+.livetext {
+    transition: all .5s;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.livetext:hover {
+    color: rgb(96, 96, 245);
+}
+
+.orange-border:hover .livetext {
+    animation-name: livetext;
+    animation-duration: .2s;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes livetext {
+    0% {
+        color: white;
+        background-color: black;
+        left: 0;
+    }
+
+    100% {
+        color: orange;
+        background-color: rgba(66, 60, 43, 0.329);
+        padding: .5%;
+        font-size: 170%;
+        left: .3em;
+    }
+}
+
+/* .ftco-animate {
+    opacity: 0;
+    visibility: hidden; 
+} */
+.ftco-animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.orange-border-d {
+    border: 1px orange solid;
+    box-shadow: 0.5em 1em 1em 1em rgb(85, 63, 23);
+    transition: all .4s;
+}
+
+.orange-border-d:hover {
+    box-shadow: -0.17em -0.2em 02em 0.1em rgb(145, 98, 12);
+}
+
+
+.livetext-mega {
+    transition: all .5s;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.livetext-mega:hover {
+    color: rgb(96, 96, 245);
+}
+
+.orange-border:hover .livetext-mega {
+    animation-name: livetext-mega;
+    animation-duration: .2s;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes livetext-mega {
+    0% {
+        color: white;
+        background-color: black;
+        left: 0;
+    }
+
+    100% {
+        color: orange;
+        background-color: rgba(73, 66, 46, 0.137);
+        padding: .5%;
+        font-size: 260%;
+        left: .2em;
+    }
+}
+
+.selector-dark {
+    transition: .4s;
+}
+
+.selector-dark:hover {
+    background-color: rgba(0, 0, 0, 0.425);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+}
+
+.a:active {
+    color: orange;
+}
+
+.a:hover {
+    color: orange;
+}
+
+.fade-loop {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.vibrate {
+    animation-name: vibrate;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transition: transform .6s;
+    transform: rotate(30deg);
+}
+
+@keyframes vibrate {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    10% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(3deg);
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    60% {
+        transform: rotate(3deg);
+    }
+
+    70% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
+    }
+
+    90% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.side-glow {
+    box-shadow: 0em 0em 2em 0em rgba(23, 50, 85, 0.671);
+}
+
+.slide-left {
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    transition: all;
+    transition-duration: .5s;
+    position: relative;
+    color: rgb(0, 119, 255);
+}
+
+.slide-left::before {
+    content: '';
+    top: 0;
+    left: 0;
+    overflow: -moz-hidden-unscrollable;
+    position: absolute;
+    background-color: rgba(255, 166, 0, 0.911);
+    height: 120%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: left;
+    transform: translateX(-100%);
+    transition: transform .6s;
+}
+
+.slide-left:hover::before {
+    transform: translateX(0) !important;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.slide-left:hover .hide {
+    opacity: 1;
+    display: inline;
+    transition-duration: 2s;
+    transition: all;
+    color: rgb(1, 14, 15);
+    animation-fill-mode: forwards;
+}
+
+.slide-left:hover .orange {
+    color: white;
+    font-weight: bolder;
+}
+
+.slide-left:hover .lnr {
+    font-size: 350%;
+    width: 2%;
+}
+
+.slide-left:hover a {
+    color: white;
+}
+
+.slide-left:hover .lnr {
+    color: rgb(2, 0, 0);
+    font-size: 120%;
+}
+
+.slide-left:hover {
+    color: rgb(255, 254, 254);
+}
+
+tr:hover {
+    background-color: rgb(8, 8, 8) !important;
+}
+
+.slide-left-sm {
+    overflow: -moz-hidden-unscrollable;
+    transition: all;
+    overflow: hidden;
+    transition-duration: .5s;
+    position: relative;
+    color: rgb(0, 119, 255);
+    box-shadow: 0em 0em 3em .1em rgba(87, 87, 87, 0.671);
+}
+
+.slide-left-sm::before {
+    content: '';
+    top: 98%;
+    left: 50%;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    position: absolute;
+    background-color: gold;
+    height: 2%;
+    width: 0%;
+    z-index: -1;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+
+.slide-left-sm:hover::before {
+    transform: scaleX(1);
+    color: white;
+    width: 100%;
+    left: 0%;
+    height: 2%;
+}
+
+.slide-left-sm:hover {
+    background-color: rgba(0, 0, 0, 0.377);
+    box-shadow: .1em .1em 2em .2em gray;
+    bottom: 5%;
+    margin: 0%;
+    image-rendering: crisp-edges;
+}
+
+.nav-link:hover {
+    color: gold;
+}
+
+.slide-left-sm:hover::selection {
+    transform: translateX(0);
+    color: white;
+    width: 100%;
+}
+
+
+
+
+.slide-left-input {
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    transition: all;
+    transition-duration: .5s;
+    position: relative;
+}
+
+.slide-left-input::before {
+    content: '';
+    top: 98%;
+    left: 50%;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    position: absolute;
+    background-color: rgb(0, 255, 55);
+    height: 2%;
+    width: 0%;
+    z-index: -1;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+
+.slide-left-input:hover::before {
+    transform: scaleX(1);
+    color: white;
+    width: 100%;
+    left: 0%;
+    height: 2%;
+}
+
+.slide-left-input:hover::selection {
+    transform: translateX(0);
+    color: white;
+    width: 100%;
+}
+
+
+.image-reflect {
+    box-shadow: 0.5em 1em 2em .1em rgba(23, 55, 85, 0.671);
+    margin-bottom: 5%;
+    border: 1px rgba(255, 0, 0, 0.651) solid;
+    transition: all 1s;
+    overflow: hidden;
+    position: relative;
+    overflow: -moz-hidden-unscrollable;
+}
+
+.image-reflect::after {
+    content: "The dashboard is your control center, you can access anything from here. more controls are available on the sidebar";
+    font-size: 200%;
+    color: gold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.664);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+}
+
+.image-reflect:hover::after {
+    opacity: 1;
+}
+
+.image-reflect:hover img {
+    transform: scale(5);
+    opacity: 0;
+}
+
+
+.newfont {
+    font-family: 'Sen', Arial, Helvetica, sans-serif;
+    color: rgb(219, 143, 2);
+
+    font-size: 270%;
+    border-bottom: 1px solid rgb(223, 96, 5);
+    margin: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    Offline display: block;
+}
+
+.open {
+    transition: all .3s;
+}
+
+.open:hover {
+    box-shadow: 1px 2px 3px orange;
+}
+
+
+.hash {
+    max-width: 100px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.circle-high {
+    transition: all .1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    padding: 9%;
+    width: 5%;
+}
+
+.circle-high:hover {
+    border: 1px orange solid;
+    background-color: orange;
+    color: black;
+    border-radius: 50%;
+}
+
+
+.left-bubble {
+    background-color: rgba(15, 92, 235, 0.24);
+    color: white;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    padding: 2%;
+    margin: 2%;
+    width: auto;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.right-bubble {
+    background-color: rgba(3, 114, 46, 0.253);
+    color: white;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    padding: 2%;
+    text-align: right;
+    transition: all 1s;
+    width: auto;
+    margin: 2%;
+}
+
+.float-lefty {
+    text-align: left;
+    width: 100%;
+    padding-right: 40%;
+    position: relative;
+}
+
+.float-righty {
+    align-items: rigt flex-end;
+    display: block;
+    padding-left: 40%;
+    text-align: right !important;
+    width: 100%;
+    position: relative;
+
+}
+
+#chatview {
+    display: block;
+    padding: 1%;
+    height: 350px;
+}
+
+.small {
+    font-size: 90%;
+    font-family: monospace;
+}
+
+.small-text {
+    color: rgb(255, 255, 255);
+    border-top: 1px rgb(255, 255, 255) solid;
+    display: block;
+    margin-top: 4px;
+    font-family: monospace;
+    font-size: 80%;
+    opacity: .8;
+}
+
+#chatview span {
+    display: block;
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+.green {
+    color: rgb(43, 216, 9);
+}
+
+.red {
+    color: red;
+}

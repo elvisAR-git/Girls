@@ -1,0 +1,64 @@
+{%extends 'base.html'%} {%load static%} {%block content%}
+<main>
+  <!--? Hero Start -->
+  <div class="slider-area2">
+    <section class="about-low-area section-padding2">
+      <div class="container">
+        <span class="green">About our foundation</span>
+        <div class="row">
+          {%for mission in missions%}
+          <div class="col-lg-6 col-md-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle mb-35">
+              <h2>{{mission.mission_statement}}</h2>
+            </div>
+            <div class="about-caption mb-50">
+              <p>
+                {{mission.mission_description}}
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <!-- about-img -->
+            <div class="about-img">
+              <div class="about-font-img d-none d-lg-block">
+                <img src="{{mission.img_1.url}}" alt="" width="50%" />
+              </div>
+              <div class="about-back-img">
+                <img src="{{mission.img_2.url}}" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+          <br />
+          <br />
+          <div class="col-lg-6 col-md-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle mb-35">
+              <h2>Our Vision</h2>
+            </div>
+            <div class="about-caption mb-50">
+              <p>
+                A World where every girl enjoys a dignified life with infinite
+                opportunities
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle mb-35">
+              <h2>Our Values</h2>
+            </div>
+            <div class="about-caption mb-50">
+              <p>
+                Girl-centered, Community driven, Transparent, and with Integrity
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{%endblock content%}

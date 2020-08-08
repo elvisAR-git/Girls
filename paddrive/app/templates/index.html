@@ -1,0 +1,491 @@
+{%extends 'base.html'%} {%load static%} {%block content%}
+<main>
+  <!-- slider Area Start-->
+  <div class="slider-area">
+    <div class="slider-active">
+      <!-- Single Slider -->
+      {%for slide in slides%}
+      <div
+        class="single-slider slider-height d-flex align-items-center"
+        style="background-image: url('{{slide.hq_image.url}}'); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
+              <div class="hero__caption">
+                <h1
+                  data-animation="fadeInUp"
+                  data-delay=".6s"
+                  style="
+                    background-color: rgba(172, 170, 170, 0.637);
+                    color: rgb(47, 209, 47);
+                    padding: 50px;
+                  "
+                >
+                  {{slide.main_title}}
+                </h1>
+                <p
+                  data-animation="fadeInUp"
+                  data-delay=".8s"
+                  style="
+                    background-color: rgba(180, 230, 253, 0.527);
+                    color: black;
+                    font-size: 180%;
+                    padding: 30px;
+                  "
+                >
+                  {{slide.sub_title}}
+                </p>
+                <!-- Hero-btn -->
+                <div class="hero__btn">
+                  <a
+                    href="/contact"
+                    class="btn hero-btn mb-10"
+                    data-animation="fadeInLeft"
+                    data-delay=".8s"
+                    >Donate</a
+                  >
+                  <a
+                    href="tel:+254701035549"
+                    class="cal-btn ml-15"
+                    data-animation="fadeInRight"
+                    data-delay="1.0s"
+                  >
+                    <i class="flaticon-null"></i>
+                    <p>+12 1325 41</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {%endfor%}
+    </div>
+    <!-- slider Area End-->
+    <section>
+      <div class="container box_1170">
+				<div class="section-top-border">
+					<div class="section-title mb-80 text-center">
+            <h2 class="mb-80"></h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+              <!-- Section Tittle -->
+              <div class="section-tittle text-center mb-80">
+                <span>Glad you're here</span>
+                <h2>WELCOME TO GIRLS NO BRIDES KENYA</h2>
+              </div>
+            </div>
+          </div>
+					<div class="row">
+						<div class="col-md-3">
+							<img src="{%static 'images/gender.svg'%}" alt="" class="img-fluid" width="80%">
+						</div>
+						<div class="col-md-9 mt-sm-20">
+							<p class="mb-50 title">where we provide girls with the tools and
+                knowledge they need to preserve their optimism, restore their confidence
+                and help them create a better world!</p>
+						</div>
+					</div>
+				</div>
+    </section>
+    <!--? Services Area Start -->
+    <div class="service-area section-padding30">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle text-center mb-80">
+              <span>What we are doing</span>
+              <h2>We Are empowering young girls for a better tommorow</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat text-center mb-50">
+              <div class="cat-icon">
+                <span class="flaticon-think"
+                  ><i class="flaticon-check"></i
+                ></span>
+              </div>
+              <div class="cat-cap">
+                <h5><a href="services.html">Education</a></h5>
+                <p>
+                  provide educational sponsorship where needed to help keep a
+                  girl in school
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat active text-center mb-50">
+              <div class="cat-icon">
+                  <img src="{%static 'images/clean-water.svg'%}" alt="" width="40%">
+              </div>
+              <div class="cat-cap">
+                <h5><a href="services.html">Clean water</a></h5>
+                <p>
+                  Provide clean and adequate water for the children
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat text-center mb-50">
+              <div class="cat-icon">
+                <span class="flaticon-gear"></span>
+              </div>
+              <div class="cat-cap">
+                <h5><a href="services.html">Personal effects</a></h5>
+                <p>
+                  Provide sanitary pads and other personal amenities needed by
+                  girls
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services Area End -->
+    <!--? About Law Start-->
+    <section class="about-low-area section-padding2">
+      <div class="container">
+        <span class="green">About our foundation</span>
+        <div class="row">
+          {%for mission in missions%}
+          <div class="col-lg-6 col-md-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle mb-35">
+              <h2>{{mission.mission_statement}}</h2>
+            </div>
+            <div class="about-caption mb-50">
+              <p>
+                {{mission.mission_description}}
+              </p>
+            </div>
+            <a href="/about" class="btn">About US</a>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <!-- about-img -->
+            <div class="about-img">
+              <div class="about-font-img d-none d-lg-block">
+                <img src="{{mission.img_1.url}}" alt="" width="50%" />
+              </div>
+              <div class="about-back-img">
+                <img src="{{mission.img_2.url}}" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </section>
+    <!-- About Law End-->
+    <!-- Our Cases Start -->
+    <div class="our-cases-area section-padding30">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle text-center mb-80">
+              <span>Our current projects</span>
+              <h2>Explore our latest projects</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {%for project in projects%}
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cases mb-40">
+              <div class="cases-img">
+                <img
+                  src="{{project.img.url}}"
+                  alt=""
+                  height="250px"
+                  width="auto"
+                />
+              </div>
+              <div class="cases-caption">
+                <h3>
+                  <a href="#">{{project.title}}</a>
+                </h3>
+                <!-- Progress Bar -->
+                <div class="single-skill mb-15">
+                  <div class="bar-progress">
+                    <div id="bar{{forloop.counter}}" class="barfiller">
+                      <div class="tipWrap">
+                        <span class="tip"></span>
+                      </div>
+                      <span
+                        class="fill"
+                        data-percentage="{{project.percentage}}"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- / progress -->
+                <div class="prices d-flex justify-content-between">
+                  <p>Raised:<span> KSH. {{project.raised}}</span></p>
+                  <p>Goal:<span> KSH. {{project.target}}</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <!-- Our Cases End -->
+    <!-- Featured_job_start -->
+    <section
+      class="featured-job-area section-padding30 section-bg2"
+      data-background="{% static 'assets/img/gallery/section_bg03.png'%}"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 col-lg-9 col-md-10 col-sm-12">
+            <!-- Section Tittle -->
+            <div class="section-tittle text-center mb-80">
+              <span>What we are doing</span>
+              <h2>We arrange many social events for charity donations</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          {%for event in events%}
+          <div class="col-lg-9 col-md-12">
+            <!-- single-job-content -->
+            <div class="single-job-items mb-30">
+              <div class="job-items">
+                <div class="company-img">
+                  <a href="#"
+                    ><img
+                      src="{{event.img.url}}"
+                      alt=""
+                      height="200px"
+                      width="200px"
+                  /></a>
+                </div>
+                <div class="job-tittle">
+                  <a href="#">
+                    <h4>{{event.title}}</h4>
+                  </a>
+                  <ul>
+                    <li><i class="far fa-clock"></i>{{event.date}}</li>
+                    <li>
+                      <i class="fas fa-map-marker-alt"></i>{{event.location}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </section>
+    <!-- Featured_job_end -->
+    <!--? Team Ara Start -->
+    <div class="team-area pt-160 pb-160">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+            <!-- Section Tittle -->
+            <div class="section-tittle section-tittle2 text-center mb-70">
+              <span>What we are doing</span>
+              <h2>Our Expert Volunteers Always ready To Help</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {%for admin in admins%}
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-team mb-30">
+              <div class="team-img">
+                <img
+                  src="{{admin.img.url}}"
+                  alt=""
+                  height="300px"
+                  width="300px"
+                />
+                <!-- Blog Social -->
+                <ul class="team-social">
+                  <li>
+                    <a href="{{admin.facebook_link}}"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="{{admin.twitter_link}}"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="{{admin.web_link}}"
+                      ><i class="fas fa-globe"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-caption">
+                <h3><a href="instructor.html">{{admin.name}}</a></h3>
+                <p>{{admin.position}}</p>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <!-- Team Ara End -->
+    <!-- Want To work -->
+    <section class="wantToWork-area">
+      <div class="container">
+        <div
+          class="wants-wrapper w-padding2 section-bg"
+          data-background="{% static 'assets/img/gallery/section_bg01.png'%}"
+        >
+          <div class="row align-items-center justify-content-between">
+            <div class="col-xl-5 col-lg-9 col-md-8">
+              <div class="wantToWork-caption wantToWork-caption2">
+                <h2>Let's Change The World With Humanity</h2>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-4">
+              <a href="/contact" class="btn white-btn f-right sm-left"
+                >Become A Volunteer</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Want To work End -->
+    <!--? Testimonial Start -->
+    <div class="testimonial-area testimonial-padding">
+      <div class="container">
+        <!-- Testimonial contents -->
+        <div class="row d-flex justify-content-center">
+          <div class="col-xl-8 col-lg-8 col-md-10">
+            <div class="h1-testimonial-active dot-style">
+              <!-- Single Testimonial -->
+              {%for quote in quotes%}
+              <div class="single-testimonial text-center">
+                <div class="testimonial-caption">
+                  <!-- founder -->
+                  <div class="testimonial-founder">
+                    <div class="founder-img mb-40">
+                      <img
+                        src="{{quote.img.url}}"
+                        alt=""
+                        class="rounded-circle"
+                        height="200px"
+                        width="200px"
+                      />
+                      <span>{{quote.name}}</span>
+                      <p>{{quote.position}}</p>
+                    </div>
+                  </div>
+                  <div class="testimonial-top-cap">
+                    <p>
+                      “{{quote.quote}}”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+    <!--? Blog Area Start -->
+    <section class="home-blog-area section-padding30">
+      <div class="container">
+        <!-- Section Tittle -->
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 col-md-9 col-sm-10">
+            <div class="section-tittle text-center mb-90">
+              <span>Our recent blog</span>
+              <h2>Latest News from our recent blog</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {%for blog in blogs%}
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="home-blog-single mb-30">
+              <div class="blog-img-cap">
+                <div class="blog-img">
+                  <img src="{{blog.hq_image.url}}" alt="" height="400px" />
+                  <!-- Blog date -->
+                  <div class="blog-date text-center">
+                    <p>{{blog.date}}</p>
+                  </div>
+                </div>
+                <div class="blog-cap">
+                  <p>{{blog.author_name}}</p>
+                  <h3>
+                    <a href="/blog/{{blog.id}}/">{{blog.main_title}}</a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </section>
+    <!-- Blog Area End -->
+    <!--? Count Down Start -->
+    <div
+      class="count-down-area pt-25 section-bg"
+      data-background="{% static 'assets/img/gallery/section_bg02.png'%}"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 col-md-12">
+            <div class="count-down-wrapper">
+              <div class="row justify-content-between">
+                {%for stat in stats%}
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <!-- Counter Up -->
+                  <div class="single-counter text-center">
+                    <span>Ksh. </span>
+                    <span class="counter color-green">{{stat.stat_1}}</span>
+                    <span class="plus">+</span>
+                    <p class="color-green">Donation</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <!-- Counter Up -->
+                  <div class="single-counter text-center">
+                    <span class="counter color-green">{{stat.stat_2}}</span>
+                    <span class="plus">+</span>
+                    <p class="color-green">Projects</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <!-- Counter Up -->
+                  <div class="single-counter text-center">
+                    <span class="counter color-green">{{stat.stat_3}}</span>
+                    <span class="plus">+</span>
+                    <p class="color-green">Events</p>
+                  </div>
+                </div>
+                {%endfor%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Count Down End -->
+  </div>
+</main>
+{%endblock content%}
